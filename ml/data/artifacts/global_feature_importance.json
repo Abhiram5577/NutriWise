@@ -1,0 +1,632 @@
+{
+  "iron": [
+    {
+      "feature": "gender",
+      "mean_abs_shap": 1.1949470043182373
+    },
+    {
+      "feature": "symptom_fatigue",
+      "mean_abs_shap": 0.8951967358589172
+    },
+    {
+      "feature": "dietary_vitamin_c_mg",
+      "mean_abs_shap": 0.4589252769947052
+    },
+    {
+      "feature": "dietary_vitamin_b12_mcg",
+      "mean_abs_shap": 0.4561833143234253
+    },
+    {
+      "feature": "bmi",
+      "mean_abs_shap": 0.4481142461299896
+    },
+    {
+      "feature": "dietary_iron_mg",
+      "mean_abs_shap": 0.4364381730556488
+    },
+    {
+      "feature": "dietary_folate_mcg",
+      "mean_abs_shap": 0.43193337321281433
+    },
+    {
+      "feature": "dietary_fiber_g",
+      "mean_abs_shap": 0.40574899315834045
+    },
+    {
+      "feature": "dietary_calories_kcal",
+      "mean_abs_shap": 0.4050790071487427
+    },
+    {
+      "feature": "dietary_vitamin_d_mcg",
+      "mean_abs_shap": 0.4033621549606323
+    },
+    {
+      "feature": "dietary_calcium_mg",
+      "mean_abs_shap": 0.4018195867538452
+    },
+    {
+      "feature": "dietary_protein_g",
+      "mean_abs_shap": 0.36813706159591675
+    },
+    {
+      "feature": "age",
+      "mean_abs_shap": 0.3386211395263672
+    },
+    {
+      "feature": "symptom_hair_loss",
+      "mean_abs_shap": 0.31200236082077026
+    },
+    {
+      "feature": "symptom_count",
+      "mean_abs_shap": 0.18898870050907135
+    },
+    {
+      "feature": "symptom_cold_intolerance",
+      "mean_abs_shap": 0.1750028282403946
+    },
+    {
+      "feature": "symptom_mood_low",
+      "mean_abs_shap": 0.08339419215917587
+    },
+    {
+      "feature": "activity_level_2",
+      "mean_abs_shap": 0.07116124778985977
+    },
+    {
+      "feature": "symptom_bone_pain",
+      "mean_abs_shap": 0.06474140286445618
+    },
+    {
+      "feature": "activity_level_0",
+      "mean_abs_shap": 0.057820893824100494
+    },
+    {
+      "feature": "symptom_tingling",
+      "mean_abs_shap": 0.05358598008751869
+    },
+    {
+      "feature": "activity_level_1",
+      "mean_abs_shap": 0.05006943643093109
+    },
+    {
+      "feature": "symptom_muscle_weakness",
+      "mean_abs_shap": 0.042016319930553436
+    },
+    {
+      "feature": "activity_level_3",
+      "mean_abs_shap": 0.03913576528429985
+    },
+    {
+      "feature": "activity_level_4",
+      "mean_abs_shap": 0.03375431150197983
+    },
+    {
+      "feature": "dietary_preference_1",
+      "mean_abs_shap": 0.02971685118973255
+    },
+    {
+      "feature": "is_smoker",
+      "mean_abs_shap": 0.026648521423339844
+    },
+    {
+      "feature": "symptom_skin_issues",
+      "mean_abs_shap": 0.01756674237549305
+    },
+    {
+      "feature": "dietary_preference_0",
+      "mean_abs_shap": 0.010901426896452904
+    },
+    {
+      "feature": "is_pregnant",
+      "mean_abs_shap": 0.007663548458367586
+    },
+    {
+      "feature": "dietary_preference_2",
+      "mean_abs_shap": 0.006594192702323198
+    }
+  ],
+  "vitamin_d": [
+    {
+      "feature": "symptom_count",
+      "mean_abs_shap": 0.5744251608848572
+    },
+    {
+      "feature": "bmi",
+      "mean_abs_shap": 0.5631025433540344
+    },
+    {
+      "feature": "age",
+      "mean_abs_shap": 0.5077157020568848
+    },
+    {
+      "feature": "symptom_bone_pain",
+      "mean_abs_shap": 0.35951533913612366
+    },
+    {
+      "feature": "dietary_vitamin_b12_mcg",
+      "mean_abs_shap": 0.35912978649139404
+    },
+    {
+      "feature": "dietary_vitamin_d_mcg",
+      "mean_abs_shap": 0.32919296622276306
+    },
+    {
+      "feature": "symptom_mood_low",
+      "mean_abs_shap": 0.32780787348747253
+    },
+    {
+      "feature": "dietary_calories_kcal",
+      "mean_abs_shap": 0.3113163113594055
+    },
+    {
+      "feature": "dietary_fiber_g",
+      "mean_abs_shap": 0.3073275089263916
+    },
+    {
+      "feature": "dietary_folate_mcg",
+      "mean_abs_shap": 0.3018222153186798
+    },
+    {
+      "feature": "dietary_calcium_mg",
+      "mean_abs_shap": 0.30035802721977234
+    },
+    {
+      "feature": "dietary_vitamin_c_mg",
+      "mean_abs_shap": 0.29845643043518066
+    },
+    {
+      "feature": "dietary_protein_g",
+      "mean_abs_shap": 0.28202328085899353
+    },
+    {
+      "feature": "dietary_iron_mg",
+      "mean_abs_shap": 0.26637664437294006
+    },
+    {
+      "feature": "symptom_skin_issues",
+      "mean_abs_shap": 0.16137731075286865
+    },
+    {
+      "feature": "gender",
+      "mean_abs_shap": 0.1574353128671646
+    },
+    {
+      "feature": "symptom_fatigue",
+      "mean_abs_shap": 0.14082208275794983
+    },
+    {
+      "feature": "symptom_muscle_weakness",
+      "mean_abs_shap": 0.13729390501976013
+    },
+    {
+      "feature": "symptom_hair_loss",
+      "mean_abs_shap": 0.1289142668247223
+    },
+    {
+      "feature": "symptom_cold_intolerance",
+      "mean_abs_shap": 0.07574941217899323
+    },
+    {
+      "feature": "symptom_tingling",
+      "mean_abs_shap": 0.06854286789894104
+    },
+    {
+      "feature": "activity_level_2",
+      "mean_abs_shap": 0.05009903758764267
+    },
+    {
+      "feature": "activity_level_0",
+      "mean_abs_shap": 0.046456120908260345
+    },
+    {
+      "feature": "activity_level_1",
+      "mean_abs_shap": 0.03839061036705971
+    },
+    {
+      "feature": "activity_level_3",
+      "mean_abs_shap": 0.029609201475977898
+    },
+    {
+      "feature": "is_smoker",
+      "mean_abs_shap": 0.01989937014877796
+    },
+    {
+      "feature": "dietary_preference_2",
+      "mean_abs_shap": 0.013821550644934177
+    },
+    {
+      "feature": "dietary_preference_0",
+      "mean_abs_shap": 0.0123318275436759
+    },
+    {
+      "feature": "activity_level_4",
+      "mean_abs_shap": 0.011226467788219452
+    },
+    {
+      "feature": "dietary_preference_1",
+      "mean_abs_shap": 0.0028763089794665575
+    },
+    {
+      "feature": "is_pregnant",
+      "mean_abs_shap": 0.001315236440859735
+    }
+  ],
+  "vitamin_b12": [
+    {
+      "feature": "age",
+      "mean_abs_shap": 1.006030559539795
+    },
+    {
+      "feature": "dietary_preference_0",
+      "mean_abs_shap": 0.8633558750152588
+    },
+    {
+      "feature": "symptom_tingling",
+      "mean_abs_shap": 0.8192561268806458
+    },
+    {
+      "feature": "dietary_vitamin_d_mcg",
+      "mean_abs_shap": 0.5884501934051514
+    },
+    {
+      "feature": "dietary_vitamin_b12_mcg",
+      "mean_abs_shap": 0.5704854726791382
+    },
+    {
+      "feature": "dietary_folate_mcg",
+      "mean_abs_shap": 0.5273914337158203
+    },
+    {
+      "feature": "dietary_vitamin_c_mg",
+      "mean_abs_shap": 0.5230549573898315
+    },
+    {
+      "feature": "dietary_calories_kcal",
+      "mean_abs_shap": 0.5028969645500183
+    },
+    {
+      "feature": "dietary_calcium_mg",
+      "mean_abs_shap": 0.494091659784317
+    },
+    {
+      "feature": "dietary_protein_g",
+      "mean_abs_shap": 0.4856734573841095
+    },
+    {
+      "feature": "bmi",
+      "mean_abs_shap": 0.4841887056827545
+    },
+    {
+      "feature": "dietary_fiber_g",
+      "mean_abs_shap": 0.42592158913612366
+    },
+    {
+      "feature": "dietary_iron_mg",
+      "mean_abs_shap": 0.3969917893409729
+    },
+    {
+      "feature": "symptom_count",
+      "mean_abs_shap": 0.35803550481796265
+    },
+    {
+      "feature": "symptom_mood_low",
+      "mean_abs_shap": 0.3366813063621521
+    },
+    {
+      "feature": "symptom_skin_issues",
+      "mean_abs_shap": 0.25514331459999084
+    },
+    {
+      "feature": "symptom_fatigue",
+      "mean_abs_shap": 0.20540989935398102
+    },
+    {
+      "feature": "dietary_preference_2",
+      "mean_abs_shap": 0.13199175894260406
+    },
+    {
+      "feature": "activity_level_1",
+      "mean_abs_shap": 0.12633086740970612
+    },
+    {
+      "feature": "activity_level_0",
+      "mean_abs_shap": 0.11471694707870483
+    },
+    {
+      "feature": "symptom_muscle_weakness",
+      "mean_abs_shap": 0.0751102939248085
+    },
+    {
+      "feature": "gender",
+      "mean_abs_shap": 0.06999967992305756
+    },
+    {
+      "feature": "symptom_cold_intolerance",
+      "mean_abs_shap": 0.06612686067819595
+    },
+    {
+      "feature": "dietary_preference_1",
+      "mean_abs_shap": 0.06255047768354416
+    },
+    {
+      "feature": "symptom_hair_loss",
+      "mean_abs_shap": 0.05774290859699249
+    },
+    {
+      "feature": "activity_level_3",
+      "mean_abs_shap": 0.0539877712726593
+    },
+    {
+      "feature": "activity_level_2",
+      "mean_abs_shap": 0.0483056865632534
+    },
+    {
+      "feature": "symptom_bone_pain",
+      "mean_abs_shap": 0.03571042791008949
+    },
+    {
+      "feature": "activity_level_4",
+      "mean_abs_shap": 0.026428308337926865
+    },
+    {
+      "feature": "is_smoker",
+      "mean_abs_shap": 0.025872092694044113
+    },
+    {
+      "feature": "is_pregnant",
+      "mean_abs_shap": 0.0
+    }
+  ],
+  "calcium": [
+    {
+      "feature": "symptom_muscle_weakness",
+      "mean_abs_shap": 0.885218620300293
+    },
+    {
+      "feature": "dietary_vitamin_d_mcg",
+      "mean_abs_shap": 0.8787281513214111
+    },
+    {
+      "feature": "dietary_folate_mcg",
+      "mean_abs_shap": 0.7907789349555969
+    },
+    {
+      "feature": "dietary_vitamin_b12_mcg",
+      "mean_abs_shap": 0.7242345213890076
+    },
+    {
+      "feature": "dietary_fiber_g",
+      "mean_abs_shap": 0.6989508867263794
+    },
+    {
+      "feature": "dietary_iron_mg",
+      "mean_abs_shap": 0.6914411187171936
+    },
+    {
+      "feature": "bmi",
+      "mean_abs_shap": 0.6599323153495789
+    },
+    {
+      "feature": "dietary_calcium_mg",
+      "mean_abs_shap": 0.651202917098999
+    },
+    {
+      "feature": "dietary_calories_kcal",
+      "mean_abs_shap": 0.6387751698493958
+    },
+    {
+      "feature": "dietary_vitamin_c_mg",
+      "mean_abs_shap": 0.6114813089370728
+    },
+    {
+      "feature": "dietary_protein_g",
+      "mean_abs_shap": 0.6031216979026794
+    },
+    {
+      "feature": "age",
+      "mean_abs_shap": 0.5935039520263672
+    },
+    {
+      "feature": "symptom_bone_pain",
+      "mean_abs_shap": 0.3536186218261719
+    },
+    {
+      "feature": "symptom_count",
+      "mean_abs_shap": 0.14972952008247375
+    },
+    {
+      "feature": "activity_level_0",
+      "mean_abs_shap": 0.10973002761602402
+    },
+    {
+      "feature": "symptom_fatigue",
+      "mean_abs_shap": 0.09875994920730591
+    },
+    {
+      "feature": "activity_level_2",
+      "mean_abs_shap": 0.07972177118062973
+    },
+    {
+      "feature": "symptom_skin_issues",
+      "mean_abs_shap": 0.07710595428943634
+    },
+    {
+      "feature": "is_smoker",
+      "mean_abs_shap": 0.07625945657491684
+    },
+    {
+      "feature": "gender",
+      "mean_abs_shap": 0.07242614030838013
+    },
+    {
+      "feature": "activity_level_1",
+      "mean_abs_shap": 0.07030918449163437
+    },
+    {
+      "feature": "dietary_preference_1",
+      "mean_abs_shap": 0.05958589166402817
+    },
+    {
+      "feature": "symptom_hair_loss",
+      "mean_abs_shap": 0.0472111813724041
+    },
+    {
+      "feature": "symptom_mood_low",
+      "mean_abs_shap": 0.04274633526802063
+    },
+    {
+      "feature": "symptom_tingling",
+      "mean_abs_shap": 0.03510517627000809
+    },
+    {
+      "feature": "activity_level_3",
+      "mean_abs_shap": 0.03471849113702774
+    },
+    {
+      "feature": "activity_level_4",
+      "mean_abs_shap": 0.022106032818555832
+    },
+    {
+      "feature": "symptom_cold_intolerance",
+      "mean_abs_shap": 0.018142184242606163
+    },
+    {
+      "feature": "dietary_preference_0",
+      "mean_abs_shap": 0.0009468806092627347
+    },
+    {
+      "feature": "is_pregnant",
+      "mean_abs_shap": 0.0
+    },
+    {
+      "feature": "dietary_preference_2",
+      "mean_abs_shap": 0.0
+    }
+  ],
+  "folate": [
+    {
+      "feature": "dietary_calcium_mg",
+      "mean_abs_shap": 1.0140539407730103
+    },
+    {
+      "feature": "dietary_folate_mcg",
+      "mean_abs_shap": 1.0102061033248901
+    },
+    {
+      "feature": "bmi",
+      "mean_abs_shap": 0.7973719239234924
+    },
+    {
+      "feature": "dietary_fiber_g",
+      "mean_abs_shap": 0.7079242467880249
+    },
+    {
+      "feature": "dietary_calories_kcal",
+      "mean_abs_shap": 0.7076164484024048
+    },
+    {
+      "feature": "dietary_vitamin_d_mcg",
+      "mean_abs_shap": 0.7035208940505981
+    },
+    {
+      "feature": "dietary_protein_g",
+      "mean_abs_shap": 0.6452357172966003
+    },
+    {
+      "feature": "dietary_iron_mg",
+      "mean_abs_shap": 0.6293196678161621
+    },
+    {
+      "feature": "dietary_vitamin_b12_mcg",
+      "mean_abs_shap": 0.6186675429344177
+    },
+    {
+      "feature": "dietary_vitamin_c_mg",
+      "mean_abs_shap": 0.6111847758293152
+    },
+    {
+      "feature": "age",
+      "mean_abs_shap": 0.49985426664352417
+    },
+    {
+      "feature": "symptom_mood_low",
+      "mean_abs_shap": 0.43957141041755676
+    },
+    {
+      "feature": "symptom_count",
+      "mean_abs_shap": 0.3296651542186737
+    },
+    {
+      "feature": "gender",
+      "mean_abs_shap": 0.3249170482158661
+    },
+    {
+      "feature": "activity_level_2",
+      "mean_abs_shap": 0.24296388030052185
+    },
+    {
+      "feature": "activity_level_3",
+      "mean_abs_shap": 0.19405636191368103
+    },
+    {
+      "feature": "symptom_tingling",
+      "mean_abs_shap": 0.1709810197353363
+    },
+    {
+      "feature": "symptom_fatigue",
+      "mean_abs_shap": 0.15791673958301544
+    },
+    {
+      "feature": "dietary_preference_0",
+      "mean_abs_shap": 0.11272644251585007
+    },
+    {
+      "feature": "is_smoker",
+      "mean_abs_shap": 0.10254193097352982
+    },
+    {
+      "feature": "activity_level_0",
+      "mean_abs_shap": 0.07147758454084396
+    },
+    {
+      "feature": "symptom_muscle_weakness",
+      "mean_abs_shap": 0.04260958731174469
+    },
+    {
+      "feature": "symptom_cold_intolerance",
+      "mean_abs_shap": 0.0412837415933609
+    },
+    {
+      "feature": "symptom_bone_pain",
+      "mean_abs_shap": 0.03908667340874672
+    },
+    {
+      "feature": "symptom_skin_issues",
+      "mean_abs_shap": 0.036775246262550354
+    },
+    {
+      "feature": "symptom_hair_loss",
+      "mean_abs_shap": 0.03238401934504509
+    },
+    {
+      "feature": "activity_level_1",
+      "mean_abs_shap": 0.027219492942094803
+    },
+    {
+      "feature": "activity_level_4",
+      "mean_abs_shap": 0.016467679291963577
+    },
+    {
+      "feature": "is_pregnant",
+      "mean_abs_shap": 0.0
+    },
+    {
+      "feature": "dietary_preference_1",
+      "mean_abs_shap": 0.0
+    },
+    {
+      "feature": "dietary_preference_2",
+      "mean_abs_shap": 0.0
+    }
+  ]
+}

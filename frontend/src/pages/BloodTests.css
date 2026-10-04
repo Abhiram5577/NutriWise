@@ -1,0 +1,542 @@
+/* ═══════════════════════════════════════════════════════════════
+   NutriWise — Blood Tests & Lab Biomarkers Editorial Styles
+   Warm ivory surfaces, clinical precision, serif typography
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Message Banners ─────────────────────────────────────────── */
+.bt-message {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 0.85rem 1.25rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.88rem;
+  font-weight: 500;
+  margin-bottom: var(--space-lg);
+}
+
+.bt-message--success {
+  background: var(--accent-sage-subtle);
+  border: 1px solid rgba(90, 130, 109, 0.3);
+  color: var(--accent-botanical);
+}
+
+.bt-message--error {
+  background: var(--accent-berry-subtle);
+  border: 1px solid rgba(155, 59, 72, 0.3);
+  color: var(--accent-berry);
+}
+
+.bt-message-close {
+  margin-left: auto;
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 0 0.25rem;
+  opacity: 0.6;
+  transition: opacity var(--transition-fast);
+}
+
+.bt-message-close:hover {
+  opacity: 1;
+}
+
+/* ── Loading Spinner ─────────────────────────────────────────── */
+.bt-loading-spinner {
+  width: 38px;
+  height: 38px;
+  border: 3px solid var(--border-light);
+  border-top-color: var(--accent-botanical);
+  border-radius: 50%;
+  animation: bt-spin 0.8s linear infinite;
+  margin: var(--space-2xl) auto;
+}
+
+@keyframes bt-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── Empty State ─────────────────────────────────────────────── */
+.bt-empty {
+  text-align: center;
+  padding: var(--space-3xl) var(--space-lg);
+  background: var(--bg-surface);
+  border: 1px dashed var(--border-medium);
+  border-radius: var(--radius-md);
+}
+
+.bt-empty-icon {
+  font-size: 3rem;
+  margin-bottom: var(--space-md);
+  opacity: 0.85;
+}
+
+.bt-empty h3 {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  color: var(--accent-botanical);
+  margin-bottom: var(--space-xs);
+}
+
+.bt-empty p {
+  color: var(--text-secondary);
+}
+
+/* ── Biomarker Panels Top Showcase ───────────────────────────── */
+.bt-panels-card {
+  margin-bottom: var(--space-2xl);
+  padding: var(--space-xl) !important;
+  background: var(--bg-secondary) !important;
+  border: 1px solid var(--border-light) !important;
+  border-radius: var(--radius-lg) !important;
+  box-shadow: var(--shadow-sm);
+}
+
+.bt-panels-header {
+  margin-bottom: var(--space-lg);
+}
+
+.bt-panels-header h2 {
+  font-size: 1.45rem;
+  color: var(--accent-botanical);
+  margin-bottom: 0.25rem;
+}
+
+.bt-panels-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: var(--space-md);
+}
+
+.bt-panel-item {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+}
+
+.bt-panel-item:hover {
+  border-color: var(--accent-botanical);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.bt-panel-item--logged {
+  border-color: rgba(90, 130, 109, 0.4);
+  background: var(--accent-sage-subtle);
+}
+
+.bt-panel-item-top {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 0.35rem;
+}
+
+.bt-panel-icon {
+  font-size: 1.35rem;
+}
+
+.bt-panel-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.bt-panel-unit {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.bt-panel-ref {
+  font-size: 0.74rem;
+  color: var(--accent-gold-dark);
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.bt-panel-desc {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.85rem;
+  line-height: 1.45;
+  flex-grow: 1;
+}
+
+.bt-panel-latest {
+  font-size: 0.78rem;
+  color: var(--accent-botanical);
+  margin-bottom: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-secondary);
+  padding: 0.45rem 0.65rem;
+  border-radius: var(--radius-sm);
+}
+
+.bt-panel-latest-date {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.bt-panel-btn {
+  width: 100%;
+  padding: 0.45rem 0.75rem !important;
+  font-size: 0.78rem !important;
+  font-weight: 600;
+}
+
+/* ── Table Layout for Lab Results ────────────────────────────── */
+.bt-table-container {
+  overflow-x: auto;
+  padding: 0 !important;
+  background: var(--bg-surface) !important;
+  border: 1px solid var(--border-light) !important;
+  border-radius: var(--radius-md) !important;
+  box-shadow: var(--shadow-sm) !important;
+}
+
+.bt-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.bt-table th,
+.bt-table td {
+  padding: 1.1rem var(--space-lg);
+  text-align: left;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.bt-table th {
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+}
+
+.bt-table tr:last-child td {
+  border-bottom: none;
+}
+
+.bt-table tbody tr:hover {
+  background: var(--bg-secondary);
+}
+
+.bt-cell-date {
+  color: var(--text-muted);
+  white-space: nowrap;
+  font-size: 0.84rem;
+}
+
+.bt-cell-name {
+  color: var(--accent-botanical);
+  font-weight: 600;
+}
+
+.bt-cell-result {
+  white-space: nowrap;
+}
+
+.bt-value {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--accent-botanical);
+}
+
+.bt-unit {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  margin-left: 0.25rem;
+}
+
+.bt-cell-ref {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.bt-cell-notes {
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+  max-width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bt-cell-actions {
+  white-space: nowrap;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.bt-icon-btn {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  font-size: 0.95rem;
+  cursor: pointer;
+  padding: 0.35rem 0.6rem;
+  border-radius: var(--radius-full);
+  transition: all var(--transition-fast);
+  margin-left: 0.35rem;
+  color: var(--text-secondary);
+}
+
+.bt-icon-btn.edit:hover {
+  background: var(--accent-botanical-subtle);
+  color: var(--accent-botanical);
+  border-color: var(--accent-botanical);
+}
+
+.bt-icon-btn.delete:hover {
+  background: var(--accent-berry-subtle);
+  color: var(--accent-berry);
+  border-color: rgba(155, 59, 72, 0.3);
+}
+
+@media (max-width: 768px) {
+  .hide-mobile {
+    display: none !important;
+  }
+}
+
+/* ── Modal Dialogs ───────────────────────────────────────────── */
+.bt-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(18, 35, 26, 0.4);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  padding: var(--space-lg);
+}
+
+.bt-modal {
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: var(--space-xl) !important;
+  background: var(--bg-surface) !important;
+  border: 1px solid var(--border-light) !important;
+  border-radius: var(--radius-lg) !important;
+  box-shadow: var(--shadow-editorial) !important;
+}
+
+.bt-modal--small {
+  max-width: 400px;
+}
+
+.bt-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-lg);
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.bt-modal-header h2 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--accent-botanical);
+}
+
+.bt-modal-close {
+  width: 32px;
+  height: 32px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-full);
+  color: var(--text-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.bt-modal-close:hover {
+  background: var(--bg-inset);
+  color: var(--text-primary);
+}
+
+/* ── Form Controls ───────────────────────────────────────────── */
+.bt-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.bt-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+}
+
+.bt-form-row.three-cols {
+  grid-template-columns: 1.2fr 1fr 1fr;
+}
+
+@media (max-width: 600px) {
+  .bt-form-row, .bt-form-row.three-cols {
+    grid-template-columns: 1fr;
+  }
+}
+
+.bt-form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.bt-form-field label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  margin-bottom: 0.35rem;
+}
+
+.bt-form-field input,
+.bt-form-field select,
+.bt-form-field textarea {
+  padding: 0.75rem 1rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  outline: none;
+  transition: all var(--transition-fast);
+}
+
+.bt-form-field input:focus,
+.bt-form-field select:focus,
+.bt-form-field textarea:focus {
+  border-color: var(--accent-gold);
+  background: var(--bg-surface);
+  box-shadow: 0 0 0 3px var(--accent-gold-subtle);
+}
+
+.bt-form-field textarea {
+  resize: vertical;
+}
+
+.bt-form-error {
+  display: flex;
+  gap: var(--space-sm);
+  padding: 0.75rem 1rem;
+  background: var(--accent-berry-subtle);
+  border: 1px solid rgba(155, 59, 72, 0.25);
+  border-radius: var(--radius-sm);
+  color: var(--accent-berry);
+  font-size: 0.84rem;
+  margin-bottom: var(--space-md);
+}
+
+.bt-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+}
+
+/* ── Modal Presets ───────────────────────────────────────────── */
+.bt-preset-section {
+  background: var(--bg-secondary);
+  border-radius: var(--radius-sm);
+  padding: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.bt-preset-label {
+  display: block;
+  font-size: 0.74rem;
+  color: var(--accent-gold-dark);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.bt-preset-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.bt-chip {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-full);
+  color: var(--text-primary);
+  font-size: 0.78rem;
+  font-weight: 500;
+  padding: 0.35rem 0.8rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: all var(--transition-fast);
+}
+
+.bt-chip:hover {
+  background: var(--bg-inset);
+  border-color: var(--accent-botanical);
+}
+
+.bt-chip--active {
+  background: var(--accent-botanical) !important;
+  border-color: var(--accent-botanical) !important;
+  color: #FFFFFF !important;
+}
+
+/* ── Delete Confirmation ─────────────────────────────────────── */
+.bt-delete-content {
+  text-align: center;
+  padding: var(--space-md) 0;
+}
+
+.bt-delete-content h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--accent-botanical);
+  margin: var(--space-md) 0 var(--space-xs);
+}
+
+.bt-delete-content p {
+  color: var(--text-secondary);
+  margin-bottom: var(--space-lg);
+  font-size: 0.9rem;
+}
+
+.bt-delete-actions {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-md);
+}
+
+.bt-delete-confirm {
+  background: var(--accent-berry) !important;
+  color: #FFFFFF !important;
+  border: 1px solid var(--accent-berry) !important;
+}
+
+.bt-delete-confirm:hover {
+  background: #832C37 !important;
+}

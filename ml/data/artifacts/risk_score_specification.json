@@ -1,0 +1,39 @@
+{
+  "risk_levels": {
+    "Low": {
+      "threshold": "< 0.30",
+      "color": "#22c55e",
+      "action": "Continue balanced diet"
+    },
+    "Moderate": {
+      "threshold": "0.30 - 0.60",
+      "color": "#f59e0b",
+      "action": "Review dietary intake; consider supplementation"
+    },
+    "High": {
+      "threshold": "> 0.60",
+      "color": "#ef4444",
+      "action": "Recommend clinical follow-up with blood test"
+    }
+  },
+  "supported_deficiencies": [
+    "iron",
+    "vitamin_d",
+    "vitamin_b12",
+    "calcium",
+    "folate"
+  ],
+  "unsupported_deficiencies": [
+    "iodine",
+    "magnesium",
+    "zinc",
+    "vitamin_a",
+    "biotin",
+    "vitamin_k",
+    "vitamin_e",
+    "selenium"
+  ],
+  "explanation_method": "TreeSHAP (exact, polynomial-time)",
+  "model_type": "XGBoost (lab features excluded)",
+  "disclaimer": "This is a statistical risk estimate and NOT a medical diagnosis."
+}

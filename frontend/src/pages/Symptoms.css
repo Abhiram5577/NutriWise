@@ -1,0 +1,500 @@
+/* ═══════════════════════════════════════════════════════════════
+   NutriWise — Symptoms & Health Log Editorial Styles
+   Warm ivory surfaces, serene questionnaire, subtle severity chips
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Message Banners ─────────────────────────────────────────── */
+.symp-message {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 0.85rem 1.25rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.88rem;
+  font-weight: 500;
+  margin-bottom: var(--space-lg);
+}
+
+.symp-message--success {
+  background: var(--accent-sage-subtle);
+  border: 1px solid rgba(90, 130, 109, 0.3);
+  color: var(--accent-botanical);
+}
+
+.symp-message--error {
+  background: var(--accent-berry-subtle);
+  border: 1px solid rgba(155, 59, 72, 0.3);
+  color: var(--accent-berry);
+}
+
+.symp-message-close {
+  margin-left: auto;
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 0 0.25rem;
+  opacity: 0.6;
+  transition: opacity var(--transition-fast);
+}
+
+.symp-message-close:hover {
+  opacity: 1;
+}
+
+/* ── Loading Spinner ─────────────────────────────────────────── */
+.symp-loading-spinner {
+  width: 38px;
+  height: 38px;
+  border: 3px solid var(--border-light);
+  border-top-color: var(--accent-botanical);
+  border-radius: 50%;
+  animation: symp-spin 0.8s linear infinite;
+  margin: var(--space-2xl) auto;
+}
+
+@keyframes symp-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── Empty State ─────────────────────────────────────────────── */
+.symp-empty {
+  text-align: center;
+  padding: var(--space-3xl) var(--space-lg);
+  background: var(--bg-surface);
+  border: 1px dashed var(--border-medium);
+  border-radius: var(--radius-md);
+}
+
+.symp-empty-icon {
+  font-size: 3rem;
+  margin-bottom: var(--space-md);
+  opacity: 0.85;
+}
+
+.symp-empty h3 {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  color: var(--accent-botanical);
+  margin-bottom: var(--space-xs);
+}
+
+.symp-empty p {
+  color: var(--text-secondary);
+}
+
+/* ── Questionnaire Card (Top Showcase) ───────────────────────── */
+.symp-questionnaire-card {
+  margin-bottom: var(--space-2xl);
+  padding: var(--space-xl) !important;
+  background: var(--bg-secondary) !important;
+  border: 1px solid var(--border-light) !important;
+  border-radius: var(--radius-lg) !important;
+  box-shadow: var(--shadow-sm);
+}
+
+.symp-q-header {
+  margin-bottom: var(--space-lg);
+}
+
+.symp-q-header h2 {
+  font-size: 1.45rem;
+  color: var(--accent-botanical);
+  margin-bottom: 0.25rem;
+}
+
+.symp-q-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: var(--space-md);
+}
+
+.symp-q-item {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+}
+
+.symp-q-item:hover {
+  border-color: var(--accent-botanical);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.symp-q-item--logged {
+  border-color: rgba(90, 130, 109, 0.4);
+  background: var(--accent-sage-subtle);
+}
+
+.symp-q-item-top {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 0.4rem;
+}
+
+.symp-q-icon {
+  font-size: 1.35rem;
+}
+
+.symp-q-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.symp-q-category {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-gold-dark);
+}
+
+.symp-q-desc {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.85rem;
+  line-height: 1.45;
+  flex-grow: 1;
+}
+
+.symp-q-btn {
+  width: 100%;
+  padding: 0.45rem 0.75rem !important;
+  font-size: 0.78rem !important;
+  font-weight: 600;
+}
+
+/* ── Logged Symptoms List ────────────────────────────────────── */
+.symp-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: var(--space-lg);
+}
+
+.symp-card {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-xl) !important;
+  background: var(--bg-surface) !important;
+  border: 1px solid var(--border-light) !important;
+  border-radius: var(--radius-md) !important;
+  box-shadow: var(--shadow-sm) !important;
+  transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.symp-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(24, 38, 31, 0.16);
+}
+
+.symp-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--space-md);
+}
+
+.symp-card-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--accent-botanical);
+}
+
+.symp-icon {
+  font-size: 1.25rem;
+}
+
+.symp-card-date {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  background: var(--bg-secondary);
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-full);
+  font-weight: 500;
+}
+
+.symp-card-body {
+  flex: 1;
+  margin-bottom: var(--space-md);
+}
+
+.symp-card-notes {
+  margin-top: var(--space-md);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  background: var(--bg-secondary);
+  padding: 0.85rem;
+  border-radius: var(--radius-sm);
+  border-left: 2px solid var(--accent-gold);
+}
+
+.symp-card-actions {
+  display: flex;
+  gap: var(--space-sm);
+  border-top: 1px solid var(--border-light);
+  padding-top: var(--space-md);
+  margin-top: auto;
+}
+
+.symp-action-btn {
+  flex: 1;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  color: var(--text-secondary);
+  padding: 0.45rem;
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.symp-action-edit:hover {
+  background: var(--accent-botanical-subtle);
+  color: var(--accent-botanical);
+  border-color: var(--accent-botanical);
+}
+
+.symp-action-delete:hover {
+  background: var(--accent-berry-subtle);
+  color: var(--accent-berry);
+  border-color: rgba(155, 59, 72, 0.3);
+}
+
+/* ── Modal Dialogs ───────────────────────────────────────────── */
+.symp-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(18, 35, 26, 0.4);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  padding: var(--space-lg);
+}
+
+.symp-modal {
+  width: 100%;
+  max-width: 520px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: var(--space-xl) !important;
+  background: var(--bg-surface) !important;
+  border: 1px solid var(--border-light) !important;
+  border-radius: var(--radius-lg) !important;
+  box-shadow: var(--shadow-editorial) !important;
+}
+
+.symp-modal--small {
+  max-width: 400px;
+}
+
+.symp-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-lg);
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.symp-modal-header h2 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--accent-botanical);
+}
+
+.symp-modal-close {
+  width: 32px;
+  height: 32px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-full);
+  color: var(--text-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.symp-modal-close:hover {
+  background: var(--bg-inset);
+  color: var(--text-primary);
+}
+
+/* ── Form Controls ───────────────────────────────────────────── */
+.symp-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.symp-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+}
+
+@media (max-width: 480px) {
+  .symp-form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.symp-form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.symp-form-field label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  margin-bottom: 0.35rem;
+}
+
+.symp-form-field input,
+.symp-form-field select,
+.symp-form-field textarea {
+  padding: 0.75rem 1rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  outline: none;
+  transition: all var(--transition-fast);
+}
+
+.symp-form-field input:focus,
+.symp-form-field select:focus,
+.symp-form-field textarea:focus {
+  border-color: var(--accent-gold);
+  background: var(--bg-surface);
+  box-shadow: 0 0 0 3px var(--accent-gold-subtle);
+}
+
+.symp-form-field textarea {
+  resize: vertical;
+}
+
+.symp-form-error {
+  display: flex;
+  gap: var(--space-sm);
+  padding: 0.75rem 1rem;
+  background: var(--accent-berry-subtle);
+  border: 1px solid rgba(155, 59, 72, 0.25);
+  border-radius: var(--radius-sm);
+  color: var(--accent-berry);
+  font-size: 0.84rem;
+  margin-bottom: var(--space-md);
+}
+
+.symp-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+}
+
+/* ── Modal Presets ───────────────────────────────────────────── */
+.symp-preset-section {
+  background: var(--bg-secondary);
+  border-radius: var(--radius-sm);
+  padding: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.symp-preset-label {
+  display: block;
+  font-size: 0.74rem;
+  color: var(--accent-gold-dark);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.symp-preset-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.symp-chip {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-full);
+  color: var(--text-primary);
+  font-size: 0.78rem;
+  font-weight: 500;
+  padding: 0.35rem 0.8rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: all var(--transition-fast);
+}
+
+.symp-chip:hover {
+  background: var(--bg-inset);
+  border-color: var(--accent-botanical);
+}
+
+.symp-chip--active {
+  background: var(--accent-botanical) !important;
+  border-color: var(--accent-botanical) !important;
+  color: #FFFFFF !important;
+}
+
+/* ── Delete Confirmation ─────────────────────────────────────── */
+.symp-delete-content {
+  text-align: center;
+  padding: var(--space-md) 0;
+}
+
+.symp-delete-content h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--accent-botanical);
+  margin: var(--space-md) 0 var(--space-xs);
+}
+
+.symp-delete-content p {
+  color: var(--text-secondary);
+  margin-bottom: var(--space-lg);
+  font-size: 0.9rem;
+}
+
+.symp-delete-actions {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-md);
+}
+
+.symp-delete-confirm {
+  background: var(--accent-berry) !important;
+  color: #FFFFFF !important;
+  border: 1px solid var(--accent-berry) !important;
+}
+
+.symp-delete-confirm:hover {
+  background: #832C37 !important;
+}

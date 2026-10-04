@@ -1,0 +1,362 @@
+/* ═══════════════════════════════════════════════════════════════
+   NutriWise — Health Profile Editorial Styles
+   Warm ivory surfaces, serif typography, serene biometrics
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Layout ──────────────────────────────────────────────────── */
+.hp-layout {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: var(--space-2xl);
+  align-items: start;
+}
+
+@media (max-width: 960px) {
+  .hp-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Loading Spinner ─────────────────────────────────────────── */
+.hp-loading-spinner {
+  width: 38px;
+  height: 38px;
+  border: 3px solid var(--border-light);
+  border-top-color: var(--accent-botanical);
+  border-radius: 50%;
+  animation: hp-spin 0.8s linear infinite;
+  margin: var(--space-2xl) auto;
+}
+
+@keyframes hp-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── Message Banners ─────────────────────────────────────────── */
+.hp-message {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 0.85rem 1.25rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.88rem;
+  font-weight: 500;
+  margin-bottom: var(--space-lg);
+}
+
+.hp-message--success {
+  background: var(--accent-sage-subtle);
+  border: 1px solid rgba(90, 130, 109, 0.3);
+  color: var(--accent-botanical);
+}
+
+.hp-message--error {
+  background: var(--accent-berry-subtle);
+  border: 1px solid rgba(155, 59, 72, 0.3);
+  color: var(--accent-berry);
+}
+
+/* ── Form Card ───────────────────────────────────────────────── */
+.hp-form {
+  padding: var(--space-xl) !important;
+  background: var(--bg-surface) !important;
+  border: 1px solid var(--border-light) !important;
+  border-radius: var(--radius-md) !important;
+  box-shadow: var(--shadow-sm) !important;
+}
+
+.hp-form-title {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent-botanical);
+  margin-bottom: var(--space-xl);
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.hp-section {
+  margin-bottom: var(--space-xl);
+  padding-bottom: var(--space-lg);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.hp-section:last-of-type {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.hp-section-title {
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--accent-gold-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: var(--space-md);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.hp-section-title::before {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 1px;
+  background-color: var(--accent-gold);
+}
+
+.hp-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+}
+
+@media (max-width: 480px) {
+  .hp-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.hp-field {
+  margin-bottom: var(--space-md);
+}
+
+.hp-field label {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  margin-bottom: 0.35rem;
+}
+
+.hp-field input,
+.hp-field select,
+.hp-field textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  outline: none;
+  transition: all var(--transition-fast);
+}
+
+.hp-field textarea {
+  resize: vertical;
+  min-height: 75px;
+}
+
+.hp-field input::placeholder,
+.hp-field textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.hp-field input:focus,
+.hp-field select:focus,
+.hp-field textarea:focus {
+  border-color: var(--accent-gold);
+  background: var(--bg-surface);
+  box-shadow: 0 0 0 3px var(--accent-gold-subtle);
+}
+
+.hp-field select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23516258'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.85rem center;
+  padding-right: 2.2rem;
+}
+
+.hp-field-hint {
+  display: block;
+  font-size: 0.74rem;
+  color: var(--text-muted);
+  margin-top: 0.3rem;
+}
+
+/* ── Activity Level Selector ─────────────────────────────────── */
+.hp-activity-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: var(--space-sm);
+}
+
+.hp-activity-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 0.75rem 0.6rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-family: var(--font-sans);
+}
+
+.hp-activity-btn:hover {
+  border-color: var(--accent-botanical);
+  background: var(--bg-inset);
+}
+
+.hp-activity-btn--active {
+  border-color: var(--accent-botanical) !important;
+  background: var(--accent-botanical) !important;
+  box-shadow: 0 2px 8px rgba(27, 53, 39, 0.15);
+}
+
+.hp-activity-label {
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.hp-activity-desc {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.hp-activity-btn--active .hp-activity-label {
+  color: #FFFFFF;
+}
+
+.hp-activity-btn--active .hp-activity-desc {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* ── Submit Button ───────────────────────────────────────────── */
+.hp-submit {
+  width: 100%;
+  padding: 0.85rem;
+  font-size: 0.95rem;
+  margin-top: var(--space-md);
+}
+
+.hp-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ── Sidebar Cards ───────────────────────────────────────────── */
+.hp-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.hp-card-title {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--accent-botanical);
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-xs);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.hp-card-empty {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  text-align: center;
+  padding: var(--space-xl) 0;
+}
+
+/* ── BMI Card ────────────────────────────────────────────────── */
+.hp-bmi-content {
+  text-align: center;
+  padding: var(--space-md) 0;
+}
+
+.hp-bmi-value {
+  font-family: var(--font-serif);
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--accent-botanical);
+  margin-bottom: 0.35rem;
+}
+
+.hp-bmi-category {
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-gold-dark);
+  margin-bottom: var(--space-lg);
+}
+
+.hp-bmi-bar {
+  position: relative;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(to right, #E0B46A, #5A826D, #E0B46A, #B85843);
+  margin-bottom: 0.5rem;
+}
+
+.hp-bmi-indicator {
+  position: absolute;
+  top: -4px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  background: var(--accent-botanical);
+  border: 3px solid #FFFFFF;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  transition: left var(--transition-base);
+}
+
+.hp-bmi-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+/* ── Summary Card ────────────────────────────────────────────── */
+.hp-summary-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.hp-summary-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 0.95rem;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
+  transition: background var(--transition-fast);
+}
+
+.hp-summary-item:hover {
+  background: var(--bg-inset);
+}
+
+.hp-summary-icon {
+  font-size: 1.35rem;
+  flex-shrink: 0;
+}
+
+.hp-summary-label {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+}
+
+.hp-summary-value {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}

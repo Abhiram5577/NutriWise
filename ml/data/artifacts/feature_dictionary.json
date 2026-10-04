@@ -1,0 +1,274 @@
+{
+  "age": {
+    "description": "Subject age in years",
+    "type": "numeric_continuous",
+    "unit": "years",
+    "source": "NHANES DEMO",
+    "transformation": "StandardScaler",
+    "notes": "Adult subjects only (18-110)"
+  },
+  "gender": {
+    "description": "Biological sex (0=Female, 1=Male)",
+    "type": "binary",
+    "unit": "encoded",
+    "source": "NHANES DEMO",
+    "transformation": "pass-through",
+    "notes": "NHANES encoding: 0=Female, 1=Male"
+  },
+  "bmi": {
+    "description": "Body Mass Index",
+    "type": "numeric_continuous",
+    "unit": "kg/m2",
+    "source": "NHANES BMX",
+    "transformation": "StandardScaler",
+    "notes": "Plausible range [10, 80]"
+  },
+  "is_pregnant": {
+    "description": "Pregnancy status",
+    "type": "binary",
+    "unit": "0/1",
+    "source": "NHANES RHQ",
+    "transformation": "pass-through",
+    "notes": "Females aged 18-45 only; modifies iron/folate thresholds"
+  },
+  "is_smoker": {
+    "description": "Current smoker status",
+    "type": "binary",
+    "unit": "0/1",
+    "source": "NHANES SMQ",
+    "transformation": "pass-through",
+    "notes": "Smoking affects Vitamin D metabolism"
+  },
+  "activity_level": {
+    "description": "Physical activity level",
+    "type": "categorical_ordinal",
+    "unit": "0=sedentary, 1=light, 2=moderate, 3=active, 4=very_active",
+    "source": "NHANES PAQ",
+    "transformation": "one-hot encoding (5 levels)",
+    "notes": "Drop-first encoding to avoid dummy variable trap"
+  },
+  "dietary_preference": {
+    "description": "Dietary pattern",
+    "type": "categorical_nominal",
+    "unit": "0=omnivore, 1=vegetarian, 2=vegan",
+    "source": "derived / NutriWise profile",
+    "transformation": "one-hot encoding (3 levels)",
+    "notes": "Strong predictor for B12 and iron deficiency in vegetarians/vegans"
+  },
+  "hemoglobin_g_dl": {
+    "description": "Hemoglobin concentration",
+    "type": "numeric_continuous",
+    "unit": "g/dL",
+    "source": "NHANES CBC",
+    "transformation": "StandardScaler",
+    "notes": "Key iron-deficiency marker; gender-stratified reference ranges"
+  },
+  "serum_ferritin_ng_ml": {
+    "description": "Serum ferritin \u2014 iron stores",
+    "type": "numeric_continuous",
+    "unit": "ng/mL",
+    "source": "NHANES FERTIN",
+    "transformation": "StandardScaler",
+    "notes": "Log-normal distribution; threshold: <12 ng/mL = iron-depleted"
+  },
+  "serum_iron_mcg_dl": {
+    "description": "Serum iron level",
+    "type": "numeric_continuous",
+    "unit": "mcg/dL",
+    "source": "NHANES BIOPRO",
+    "transformation": "StandardScaler",
+    "notes": ""
+  },
+  "tibc_mcg_dl": {
+    "description": "Total Iron Binding Capacity",
+    "type": "numeric_continuous",
+    "unit": "mcg/dL",
+    "source": "NHANES BIOPRO",
+    "transformation": "StandardScaler",
+    "notes": "Elevated in iron deficiency"
+  },
+  "vitamin_d_25ohd_ng_ml": {
+    "description": "Serum 25-hydroxyvitamin D",
+    "type": "numeric_continuous",
+    "unit": "ng/mL",
+    "source": "NHANES VID",
+    "transformation": "StandardScaler",
+    "notes": "Threshold: <20 ng/mL = deficient"
+  },
+  "vitamin_b12_pg_ml": {
+    "description": "Serum vitamin B12 (cobalamin)",
+    "type": "numeric_continuous",
+    "unit": "pg/mL",
+    "source": "NHANES B12",
+    "transformation": "StandardScaler",
+    "notes": "Threshold: <200 pg/mL = deficient; log-normal"
+  },
+  "serum_calcium_mg_dl": {
+    "description": "Serum calcium",
+    "type": "numeric_continuous",
+    "unit": "mg/dL",
+    "source": "NHANES BIOPRO",
+    "transformation": "StandardScaler",
+    "notes": "Threshold: <8.5 mg/dL = hypocalcaemia"
+  },
+  "serum_folate_ng_ml": {
+    "description": "Serum folate",
+    "type": "numeric_continuous",
+    "unit": "ng/mL",
+    "source": "NHANES FOLATE",
+    "transformation": "StandardScaler",
+    "notes": "Threshold: <3 ng/mL = deficient"
+  },
+  "rbc_folate_ng_ml": {
+    "description": "Red blood cell folate (longer-term stores)",
+    "type": "numeric_continuous",
+    "unit": "ng/mL",
+    "source": "NHANES FOLATE",
+    "transformation": "StandardScaler",
+    "notes": "Complements serum_folate; threshold >140 ng/mL normal"
+  },
+  "dietary_iron_mg": {
+    "description": "Daily iron intake (24h recall)",
+    "type": "numeric_continuous",
+    "unit": "mg/day",
+    "source": "NHANES DR1TOT",
+    "transformation": "StandardScaler",
+    "notes": "RDA: 8 mg/day (M), 18 mg/day (F pre-menopause)"
+  },
+  "dietary_calcium_mg": {
+    "description": "Daily calcium intake (24h recall)",
+    "type": "numeric_continuous",
+    "unit": "mg/day",
+    "source": "NHANES DR1TOT",
+    "transformation": "StandardScaler",
+    "notes": "RDA: 1000-1200 mg/day"
+  },
+  "dietary_vitamin_d_mcg": {
+    "description": "Daily vitamin D intake (24h recall)",
+    "type": "numeric_continuous",
+    "unit": "mcg/day",
+    "source": "NHANES DR1TOT",
+    "transformation": "StandardScaler",
+    "notes": "RDA: 15-20 mcg/day; most Americans fall below"
+  },
+  "dietary_vitamin_b12_mcg": {
+    "description": "Daily vitamin B12 intake (24h recall)",
+    "type": "numeric_continuous",
+    "unit": "mcg/day",
+    "source": "NHANES DR1TOT",
+    "transformation": "StandardScaler",
+    "notes": "RDA: 2.4 mcg/day; very low in vegans"
+  },
+  "dietary_folate_mcg": {
+    "description": "Daily folate/folic acid intake (24h recall)",
+    "type": "numeric_continuous",
+    "unit": "mcg DFE/day",
+    "source": "NHANES DR1TOT",
+    "transformation": "StandardScaler",
+    "notes": "RDA: 400 mcg DFE/day"
+  },
+  "dietary_vitamin_c_mg": {
+    "description": "Daily vitamin C intake (enhances non-heme iron absorption)",
+    "type": "numeric_continuous",
+    "unit": "mg/day",
+    "source": "NHANES DR1TOT",
+    "transformation": "StandardScaler",
+    "notes": "Indirect predictor for iron status via absorption"
+  },
+  "dietary_protein_g": {
+    "description": "Daily protein intake (24h recall)",
+    "type": "numeric_continuous",
+    "unit": "g/day",
+    "source": "NHANES DR1TOT",
+    "transformation": "StandardScaler",
+    "notes": "Proxy for overall diet quality"
+  },
+  "dietary_calories_kcal": {
+    "description": "Daily energy intake (24h recall)",
+    "type": "numeric_continuous",
+    "unit": "kcal/day",
+    "source": "NHANES DR1TOT",
+    "transformation": "StandardScaler",
+    "notes": "General diet quantity proxy"
+  },
+  "dietary_fiber_g": {
+    "description": "Daily fiber intake",
+    "type": "numeric_continuous",
+    "unit": "g/day",
+    "source": "NHANES DR1TOT",
+    "transformation": "StandardScaler",
+    "notes": "High fiber may slightly inhibit iron absorption"
+  },
+  "symptom_fatigue": {
+    "description": "Fatigue present (0/1)",
+    "type": "binary",
+    "unit": "0/1",
+    "source": "NutriWise symptom questionnaire",
+    "transformation": "pass-through",
+    "notes": "Self-reported; low specificity"
+  },
+  "symptom_hair_loss": {
+    "description": "Hair loss or thinning (0/1)",
+    "type": "binary",
+    "unit": "0/1",
+    "source": "NutriWise symptom questionnaire",
+    "transformation": "pass-through",
+    "notes": "Associated with iron deficiency"
+  },
+  "symptom_skin_issues": {
+    "description": "Skin conditions present (0/1)",
+    "type": "binary",
+    "unit": "0/1",
+    "source": "NutriWise symptom questionnaire",
+    "transformation": "pass-through",
+    "notes": ""
+  },
+  "symptom_muscle_weakness": {
+    "description": "Muscle weakness (0/1)",
+    "type": "binary",
+    "unit": "0/1",
+    "source": "NutriWise symptom questionnaire",
+    "transformation": "pass-through",
+    "notes": "Associated with Vitamin D and calcium deficiency"
+  },
+  "symptom_mood_low": {
+    "description": "Low mood / depression (0/1)",
+    "type": "binary",
+    "unit": "0/1",
+    "source": "NutriWise symptom questionnaire",
+    "transformation": "pass-through",
+    "notes": "Associated with B12, D, folate deficiency"
+  },
+  "symptom_bone_pain": {
+    "description": "Bone or joint pain (0/1)",
+    "type": "binary",
+    "unit": "0/1",
+    "source": "NutriWise symptom questionnaire",
+    "transformation": "pass-through",
+    "notes": "Associated with Vitamin D deficiency (osteomalacia)"
+  },
+  "symptom_tingling": {
+    "description": "Tingling or numbness (0/1)",
+    "type": "binary",
+    "unit": "0/1",
+    "source": "NutriWise symptom questionnaire",
+    "transformation": "pass-through",
+    "notes": "Associated with B12 deficiency (peripheral neuropathy)"
+  },
+  "symptom_cold_intolerance": {
+    "description": "Cold intolerance (0/1)",
+    "type": "binary",
+    "unit": "0/1",
+    "source": "NutriWise symptom questionnaire",
+    "transformation": "pass-through",
+    "notes": "Associated with iron-deficiency anaemia"
+  },
+  "symptom_count": {
+    "description": "Total number of symptoms reported",
+    "type": "numeric_discrete",
+    "unit": "count",
+    "source": "Derived from symptom flags",
+    "transformation": "pass-through",
+    "notes": "Aggregate symptom burden indicator"
+  }
+}
