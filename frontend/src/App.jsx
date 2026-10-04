@@ -6,6 +6,7 @@ import FoodDiary from './pages/FoodDiary';
 import HealthProfile from './pages/HealthProfile';
 import Symptoms from './pages/Symptoms';
 import BloodTests from './pages/BloodTests';
+import AiInsights from './pages/AiInsights';
 import Login from './pages/Login';
 import Register from './pages/Register';
 
@@ -50,6 +51,7 @@ function AppRoutes() {
         <Route path="/health-profile" element={<ProtectedRoute><HealthProfile /></ProtectedRoute>} />
         <Route path="/symptoms" element={<ProtectedRoute><Symptoms /></ProtectedRoute>} />
         <Route path="/blood-tests" element={<ProtectedRoute><BloodTests /></ProtectedRoute>} />
+        <Route path="/ai-insights" element={<ProtectedRoute><AiInsights /></ProtectedRoute>} />
         <Route path="/login" element={<GuestRoute><Login /></GuestRoute>} />
         <Route path="/register" element={<GuestRoute><Register /></GuestRoute>} />
       </Routes>

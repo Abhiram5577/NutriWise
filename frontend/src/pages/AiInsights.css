@@ -1,0 +1,523 @@
+/* ═══════════════════════════════════════════════════════════════
+   NutriWise — AI Insights & Deficiency Prediction Engine Styles
+   ═══════════════════════════════════════════════════════════════ */
+
+.ai-insights-page {
+  padding-bottom: var(--space-3xl);
+}
+
+.insights-header {
+  margin-bottom: var(--space-xl);
+  text-align: center;
+  max-width: 820px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.insights-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 3.8vw, 3rem);
+  font-weight: 400;
+  line-height: 1.18;
+  color: var(--text-primary);
+  margin-top: var(--space-2xs);
+  margin-bottom: var(--space-sm);
+}
+
+.insights-title em {
+  font-style: italic;
+  font-family: var(--font-serif);
+  color: var(--accent-botanical);
+}
+
+.insights-subtitle {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ── Telemetry Bar ── */
+.telemetry-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  justify-content: center;
+  margin-top: var(--space-md);
+}
+
+.telemetry-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.85rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  box-shadow: var(--shadow-sm);
+}
+
+.telemetry-pill strong {
+  color: var(--text-primary);
+}
+
+.telemetry-pill .dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent-sage);
+}
+
+.telemetry-pill .dot.active {
+  background: #2E7D32;
+  box-shadow: 0 0 6px rgba(46, 125, 50, 0.4);
+}
+
+/* ── Console Card ── */
+.insights-console-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+  margin-bottom: var(--space-xl);
+  box-shadow: var(--shadow-sm);
+}
+
+.console-tabs {
+  display: flex;
+  gap: var(--space-xs);
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.console-tab {
+  background: none;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  transition: all 0.2s ease;
+}
+
+.console-tab:hover {
+  background: var(--bg-inset);
+  color: var(--text-primary);
+}
+
+.console-tab.active {
+  background: var(--accent-botanical);
+  color: var(--text-inverse);
+}
+
+.scenarios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-sm);
+}
+
+.scenario-btn {
+  text-align: left;
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: var(--space-sm) var(--space-md);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.scenario-btn:hover {
+  border-color: var(--accent-gold);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.scenario-btn.selected {
+  border-color: var(--accent-botanical);
+  background: #F4F7F4;
+  box-shadow: 0 0 0 1px var(--accent-botanical);
+}
+
+.scenario-btn-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.3rem;
+}
+
+.scenario-title {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+}
+
+.scenario-tag {
+  background: var(--accent-botanical);
+  color: white;
+  font-size: 0.68rem;
+  padding: 0.15rem 0.45rem;
+  border-radius: var(--radius-full);
+}
+
+.scenario-desc {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.my-data-console {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.my-data-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: var(--space-sm);
+}
+
+.stat-box {
+  background: var(--bg-inset);
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-box .stat-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+}
+
+.stat-box .stat-val {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-top: 0.2rem;
+}
+
+.btn-primary-botanical {
+  align-self: flex-start;
+  background: var(--accent-botanical);
+  color: white;
+  border: none;
+  border-radius: var(--radius-full);
+  padding: 0.65rem 1.6rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-primary-botanical:hover:not(:disabled) {
+  background: var(--accent-botanical-light);
+  transform: translateY(-1px);
+}
+
+.btn-primary-botanical:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ── Banners ── */
+.alert-banner {
+  display: flex;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-md);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.alert-banner.warning {
+  background: #FFF9E6;
+  border: 1px solid #FFE082;
+  color: #795548;
+}
+
+.alert-banner.error {
+  background: #FFEBEE;
+  border: 1px solid #FFCDD2;
+  color: #C62828;
+}
+
+.gap-list {
+  margin-top: 0.35rem;
+  padding-left: 1.2rem;
+  font-size: 0.8rem;
+}
+
+/* ── Deficiency Results Grid ── */
+.deficiency-results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--space-md);
+  margin-bottom: var(--space-2xl);
+}
+
+.deficiency-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.25s ease;
+}
+
+.deficiency-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.deficiency-card.high {
+  border-color: #EF9A9A;
+  background: linear-gradient(180deg, #FFF9F9 0%, #FFFFFF 30%);
+}
+
+.deficiency-card.moderate {
+  border-color: #FFE082;
+  background: linear-gradient(180deg, #FFFCF2 0%, #FFFFFF 30%);
+}
+
+.deficiency-card.low {
+  border-color: #C8E6C9;
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-xs);
+}
+
+.card-title-group {
+  display: flex;
+  gap: 0.65rem;
+  align-items: center;
+}
+
+.card-icon {
+  font-size: 1.6rem;
+}
+
+.card-title {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 0.15rem;
+}
+
+.card-subtitle {
+  font-size: 0.74rem;
+  color: var(--text-muted);
+}
+
+.risk-badge {
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.badge-low {
+  background: #E8F5E9;
+  color: #2E7D32;
+  border: 1px solid #A5D6A7;
+}
+
+.badge-moderate {
+  background: #FFF8E1;
+  color: #E65100;
+  border: 1px solid #FFE082;
+}
+
+.badge-high {
+  background: #FFEBEE;
+  color: #C62828;
+  border: 1px solid #FFCDD2;
+}
+
+/* ── Meter ── */
+.meter-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.meter-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.meter-val {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.meter-track {
+  width: 100%;
+  height: 10px;
+  background: var(--bg-inset);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.meter-fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fill-low {
+  background: #43A047;
+}
+
+.fill-moderate {
+  background: #FB8C00;
+}
+
+.fill-high {
+  background: #E53935;
+}
+
+.meter-scale {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.65rem;
+  color: var(--text-muted);
+}
+
+/* ── Contributors / SHAP ── */
+.contributors-section {
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 0.75rem 0.9rem;
+}
+
+.contributors-title {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-secondary);
+  margin-bottom: 0.4rem;
+}
+
+.contributors-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.contributor-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: var(--text-primary);
+}
+
+.contrib-bullet {
+  color: var(--accent-gold);
+  margin-right: 0.4rem;
+  font-size: 0.7rem;
+}
+
+.contrib-desc {
+  flex: 1;
+}
+
+.contrib-impact {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.1rem 0.4rem;
+  border-radius: var(--radius-xs);
+}
+
+.impact-increases_risk {
+  color: #C62828;
+  background: #FFEBEE;
+}
+
+.impact-decreases_risk {
+  color: #2E7D32;
+  background: #E8F5E9;
+}
+
+.no-contributors {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.card-disclaimer {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+  border-top: 1px dashed var(--border-subtle);
+  padding-top: 0.5rem;
+}
+
+/* ── Notice Footer ── */
+.clinical-notice-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: var(--space-md) var(--space-lg);
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.clinical-notice-card h4 {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  margin-bottom: 0.4rem;
+  color: var(--text-primary);
+}
+
+.clinical-notice-card p {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.loading-state {
+  text-align: center;
+  padding: var(--space-xl);
+  color: var(--text-secondary);
+}
+
+.spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid var(--border-light);
+  border-top-color: var(--accent-botanical);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: 0 auto var(--space-sm);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

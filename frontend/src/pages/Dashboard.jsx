@@ -56,12 +56,12 @@ export default function Dashboard() {
     },
     {
       num: '06',
-      icon: '🌱',
+      icon: '✨',
       title: 'AI Insights',
       description: 'Predictive machine intelligence tailored to your unique metabolic profile.',
-      status: 'Future',
-      path: '#',
-      cta: 'Preview Protocol',
+      status: 'Live',
+      path: '/ai-insights',
+      cta: 'View Risk Engine',
     },
   ];
 

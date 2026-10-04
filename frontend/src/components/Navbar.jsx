@@ -43,6 +43,9 @@ export default function Navbar() {
               <NavLink to="/blood-tests" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`} id="nav-blood-tests">
                 Blood Tests
               </NavLink>
+              <NavLink to="/ai-insights" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`} id="nav-ai-insights">
+                AI Insights ✨
+              </NavLink>
               <div className="nav-user-section">
                 <span className="nav-user-pill">
                   <span className="nav-user-dot"></span>

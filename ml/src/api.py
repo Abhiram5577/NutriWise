@@ -75,6 +75,7 @@ class PredictionRequest(BaseModel):
     requested_targets: Optional[List[str]] = Field(None, description=f"List of targets. Supported: {', '.join(SUPPORTED_DEFICIENCIES)}")
 
 @app.post("/predict")
+@app.post("/api/predict")
 async def predict_deficiencies(request: PredictionRequest):
     if predictor is None:
         raise HTTPException(status_code=503, detail="ML Models not loaded")
@@ -128,6 +129,7 @@ class IntegrationRequest(BaseModel):
     requested_targets: Optional[List[str]] = None
 
 @app.post("/predict/from-app")
+@app.post("/api/predict/from-app")
 async def predict_from_app(request: IntegrationRequest):
     """
     Integration endpoint: accepts Milestone 1 data structures
